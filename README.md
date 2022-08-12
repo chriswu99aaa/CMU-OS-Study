@@ -1,14 +1,14 @@
 ### My progress for labs of CS:APP3e
 
 - [x] Lab0: c programming lab
-- [x] Lab1: data lab
-- [x] Lab2: bomb lab
-- [x] Lab3: attack lab
-- [x] Lab4: cache lab
-- [x] Lab5: shell lab
-- [x] Lab6: malloc lab
-- [x] Lab7: proxy lab
-- [x] Lab Hidden: proc lab (focus on process control and signal handling, similar to shell lab)
+- ] Lab1: data lab
+- ] Lab2: bomb lab
+- ] Lab3: attack lab
+- ] Lab4: cache lab
+- ] Lab5: shell lab
+- ] Lab6: malloc lab
+- ] Lab7: pry lab
+- ] Lab Hidden: proc lab (focus on process control and signal handling, similar to shell lab)
 
 
 choose fall 2017 because this semester's videos are available on youtube
@@ -40,58 +40,58 @@ choose fall 2017 because this semester's videos are available on youtube
 - [x] Machine Prog: Advanced
   - [x] reading 3.10
   - [x] video
-- [x] Code Optimization
-  - [x] reading 5
-  - [x] video
-- [x] The Memory Hierarchy
-  - [x] reading 6.1-6.3
-  - [x] video
-- [x] Cache Memories
-  - [x] reading 6.4-6.7
-  - [x] video
-- [x] Linking
-  - [x] reading 7
-  - [x] video
-- [x] ECF: Exceptions & Processes
-  - [x] reading 8.1-8.4
-  - [x] video
-- [x] ECF: Signals & Nonlocal Jumps
-  - [x] reading 8.5-8.8
-  - [x] video
-- [x] System Level I/O
-  - [x] reading 10
-  - [x] video
-- [x] Virtual Memory: Concept
-  - [x] reading 9.1-9.6
-  - [x] video
-- [x] Virtual Memory: Systems
-  - [x] reading 9.7-9.8
-  - [x] video
-- [x] Dynamic Memory Allocation: Basic
-  - [x] reading 9.9
-  - [x] video
-- [x] Dynamic Memory Allocation: Advanced
-  - [x] reading 9.10-9.13
-  - [x] video
-- [x] Network Programming (Part I)
-  - [x] reading 11.1-11.4
-  - [x] video
-- [x] Network Programming (Part II)
-  - [x] reading 11.5-11.6
-  - [x] video
-- [x] Concurrent programming
-  - [x] reading 12.1-12.3
-  - [x] video
-- [x] Synchronization: Basic
-  - [x] reading 12.4,12.5.1-3
-  - [x] video
-- [x] Synchronization: Advanced
-  - [x] reading 12.5.4-5,12.7-8
-  - [x] video
-- [x] Thread-Level Parallelism
-  - [x] reading 12.6
-  - [x] video
-- [x] Future of Computing I
-  - [x] video
-- [x] Future of Computing II
-  - [x] video
+- [] Code Optimization
+  - [] reading 5
+  - [] video
+- [] The Memory Hierarchy
+  - [] reading 6.1-6.3
+  - [] video
+- [] Cache Memories
+  - [] reading 6.4-6.7
+  - [] video
+- [] Linking
+  - [] reading 7
+  - [] video
+- [] ECF: Exceptions & Processes
+  - [] reading 8.1-8.4
+  - [] video
+- [] ECF: Signals & Nonlocal Jumps
+  - [] reading 8.5-8.8
+  - [] video
+- [] System Level I/O
+  - [] reading 10
+  - [] video
+- [] Virtual Memory: Concept
+  - [] reading 9.1-9.6
+  - [] video
+- [] Virtual Memory: Systems
+  - [] reading 9.7-9.8
+  - [] video
+- [] Dynamic Memory Allocation: Basic
+  - [] reading 9.9
+  - [] video
+- [] Dynamic Memory Allocation: Advanced
+  - [] reading 9.10-9.13
+  - [] video
+- [] Network Programming (Part I)
+  - [] reading 11.1-11.4
+  - [] video
+- [] Network Programming (Part II)
+  - [] reading 11.5-11.6
+  - [] video
+- [] Concurrent programming
+  - [] reading 12.1-12.3
+  - [] video
+- [] Synchronization: Basic
+  - [] reading 12.4,12.5.1-3
+  - [] video
+- [] Synchronization: Advanced
+  - [] reading 12.5.4-5,12.7-8
+  - [] video
+- [] Thread-Level Parallelism
+  - [] reading 12.6
+  - [] video
+- [] Future of Computing I
+  - [] video
+- [] Future of Computing II
+  - [] video
