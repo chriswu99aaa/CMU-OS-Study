@@ -66,7 +66,8 @@ INTEGER CODING RULES:
   You may assume that your machine:
   1. Uses 2s complement, 32-bit representations of integers.
   2. Performs right shifts arithmetically.
-  3. Has unpredictable behavior when shifting if the shift amount
+  3. Has unpredictable behavior when shifting if the shift amount/
+  '?
      is less than 0 or greater than 31.
 
 
@@ -157,6 +158,7 @@ int bitXor(int x, int y) {
 int tmin(void) {
   // minimum two's complement is sign bit 1 and all others bits are 0
   // in 32 this is 1 with 31 0
+  // this gives sign bit 1 and all other bits 0
   return 0x1 << 31;
 
 }
@@ -169,14 +171,23 @@ int tmin(void) {
  *   Rating: 1
  */
 int isTmax(int x) {
-  // max of two's complement is sign bit 0 and all other bits are 1
+    // max of two's complement is sign bit 0 and all other bits are 1
+    // if x is Tmax, then x is 0111111... in binary, and x+1 will be 1000000... in
+    // binary which is Tmin. (01111...)^(10000...) = (11111....) = a. We can apply bitwise
+    // negate to the result a so that ~a = (000000...). Furthermore, If we apply 
+    // logical not !, it will return all non-zero value to be 0 and return 1
+    // if it is 0. We want to check. Finally, we need to excludes the case when x = -1,
+    // which is the case when x = 11111.... If x = -1, then x+1 will be 0, and the apply !
+    // to it, the result will be 1. So we apply two ! to x+1 indicating that we don't want
+    // to the result of the first ! to be 1 which further implies we don't want x+1=0.
+    // Finally, we want to both a and b to return 1; otherwise the combination should return 0 
+    // at the end.
 
-  int result = 0x11111111&x;
-  if(result)
-  {
-        return 1;
-  }
-  return 0;
+    int result = !(~(x +!(x+1) ^ (x+1)));
+
+    //or a = !(~(x^(x+1))), b = !!(x+1); result = a&b;
+    return result;
+
 }
 /* 
  * allOddBits - return 1 if all odd-numbered bits in word set to 1
@@ -187,7 +198,30 @@ int isTmax(int x) {
  *   Rating: 2
  */
 int allOddBits(int x) {
-  return 2;
+    /*
+    * can we use 0xAAAAAAAA to compare with all other numbers.
+    * if xor equal 0, then we know all odd bits are 1 and 
+    * we apply logical not to return the value. The issue here is 
+    * we need to make sure that 0xAAAA... is the only case that
+    * all old number is 1.
+    * 
+    * After analysis, I found out that we can't directly use
+    * 0xAAAAA..., but instead we can construct the number.
+    * Also remember that all intergers are 32-bits 2's complement.
+    * We perform left shift to get the 1010 pattern in high bits.
+    * 0xAA is 8 bits in binary 10101010. We add it with 0xAA left shift by 8,
+    * so we get the 8 more bits in the pattern. (10101010 10101010). Similar
+    * reasoning holds for 0xAA << 16. Finally, we apply the mask. z&x get
+    * the value of odd bits and ignore all even bits, and then apply a xor to
+    * check the difference. If there is no different the result will be 1 as 
+    * a result from !.
+    */
+
+   int y = (0xAA) + (0xAA << 8);
+   int z = y + (0xAA << 16);
+   int result = !((z&x) ^ z);
+
+  return result;
 }
 /* 
  * negate - return -x 
