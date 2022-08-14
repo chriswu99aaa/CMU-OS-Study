@@ -231,7 +231,13 @@ int allOddBits(int x) {
  *   Rating: 2
  */
 int negate(int x) {
-  return 2;
+
+    /*
+    * ~ use tilde to negate the binary number
+    * and then add 1 to it
+    */
+
+  return ~x + 1;
 }
 //3
 /* 
@@ -244,7 +250,17 @@ int negate(int x) {
  *   Rating: 3
  */
 int isAsciiDigit(int x) {
-  return 2;
+    /**
+    * The idea of this solution is that we subtract 48 from x to see if x is
+    * a nagative number by right shifting 31 bits to check the sign bits. If
+    * the sign bit is 1, then we know x is smaller than 48 so not in the range
+    * of 0x30 <= x <=0x3F. Similarly, we subtract 59 from x to see if the result
+    * is positive, indicating x is above the range mentioned previously. If it's 
+    * positive, then right shifting by 31 will have the sign bit to be 0, which is
+    * not what we want; thus we apply a double exlamation mark
+    */
+
+    return !(x + ~48+1)>>31 & !!(x + ~59+1)>>31; 
 }
 /* 
  * conditional - same as x ? y : z 
@@ -254,7 +270,10 @@ int isAsciiDigit(int x) {
  *   Rating: 3
  */
 int conditional(int x, int y, int z) {
-  return 2;
+    
+    x = !!x;
+    x = ~x+1; //get complement of x
+  return (x&y) | (~x&z);
 }
 /* 
  * isLessOrEqual - if x <= y  then return 1, else return 0 
@@ -264,6 +283,8 @@ int conditional(int x, int y, int z) {
  *   Rating: 3
  */
 int isLessOrEqual(int x, int y) {
+
+    
   return 2;
 }
 //4
