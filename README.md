@@ -1,14 +1,14 @@
 ### My progress for labs of CS:APP3e
 
 - [x] Lab0: c programming lab
-- ] Lab1: data lab
-- ] Lab2: bomb lab
-- ] Lab3: attack lab
-- ] Lab4: cache lab
-- ] Lab5: shell lab
-- ] Lab6: malloc lab
-- ] Lab7: pry lab
-- ] Lab Hidden: proc lab (focus on process control and signal handling, similar to shell lab)
+- [] Lab1: data lab
+- [] Lab2: bomb lab
+- [] Lab3: attack lab
+- [] Lab4: cache lab
+- [] Lab5: shell lab
+- [] Lab6: malloc lab
+- [] Lab7: pry lab
+- [] Lab Hidden: proc lab (focus on process control and signal handling, similar to shell lab)
 
 
 choose fall 2017 because this semester's videos are available on youtube
